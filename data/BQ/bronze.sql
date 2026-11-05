@@ -64,3 +64,8 @@ OPTIONS (
 );
 
 ---------------------------------------------------------------------------------------------------------------------------
+CREATE  OR REPLACE EXTERNAL TABLE IF NOT EXISTS `gcp-data-engineering-504911.bronze_dataset.transactions_hb` 
+OPTIONS (
+  format = 'JSON',
+  uris = ['gs://healthcare-bucket-11012026/landing/hospital-b/transactions/*.json']
+);
